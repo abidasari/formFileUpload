@@ -426,7 +426,7 @@ main.main form {
       margin: 0 auto;
       box-shadow: 0 2px 2px #908f8f; }
     main.main form .button-bar .btn.disabled {
-      /*background: url("../i/1X/button-disable-bg.png");*/
+      background: red;
       opacity: 1;
       box-shadow: none; }
 
