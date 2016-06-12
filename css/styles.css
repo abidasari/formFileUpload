@@ -1,0 +1,1581 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/Nunito-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/Nunito-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/Nunito-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+html {
+  position: relative;
+  height: 100%; }
+
+body {
+  font-family: "Nunito", sans-serif;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding-top: 68px;
+  font-weight: 300; }
+
+* {
+  -webkit-overflow-scrolling: touch; }
+
+input,
+textarea {
+  outline: none;
+  border-radius: 0;
+  font-family: "Nunito", sans-serif;
+  -webkit-appearance: none; }
+
+a:focus {
+  outline: none; }
+
+.btn {
+  letter-spacing: 1px;
+  outline: none; }
+
+.btn:focus,
+.btn:active {
+  outline: none; }
+
+button:focus {
+  outline: none; }
+
+.pie {
+  position: relative;
+  z-index: 1; }
+
+iframe {
+  border: none; }
+
+/*header styles */
+header.header {
+  display: block;
+  position: absolute;
+  height: 68px;
+  left: 0;
+  top: 0;
+  right: 0;
+  background: #ffffff;
+  padding: 0 30px; }
+  header.header .logo {
+    display: block;
+    float: left;
+    background: url("../i/1X/logo.png") no-repeat;
+    background-size: 300px;
+    margin: 12px 10px;
+    width: 300px;
+    height: 46px; }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      header.header .logo {
+        /* on retina, use image that's scaled by 2 */
+        background-image: url("../i/2X/logo.png");
+        background-size: 300px; } }
+  header.header .login {
+    font-size: 9px;
+    font-weight: 300;
+    text-align: center;
+    height: 30px;
+    line-height: 28px;
+    border: 1px solid #4A8FE1;
+    color: #59A2E7;
+    border-radius: 3px;
+    float: right;
+    margin: 19px 4px;
+    padding: 0;
+    width: 82px;
+    position: relative;
+    z-index: 1; }
+  header.header .menu-icon {
+    float: left;
+    position: relative;
+    z-index: 1;
+    margin: 17px 15px 17px 0;
+    cursor: pointer; }
+    header.header .menu-icon .nav-toggle {
+      display: block;
+      width: 46px;
+      height: 34px;
+      position: absolute;
+      z-index: 2;
+      background: url("../i/1X/transparent-bg.png");
+      opacity: 0.01; }
+    header.header .menu-icon .navbar-toggle {
+      display: block;
+      float: left;
+      border: 1px solid #4A8FE1;
+      margin: 0;
+      cursor: pointer;
+      position: relative;
+      z-index: 1; }
+      header.header .menu-icon .navbar-toggle .icon-bar {
+        background: #4A8FE1;
+        cursor: pointer; }
+  header.header .welcome {
+    display: block;
+    float: right;
+    height: 68px;
+    line-height: 20px;
+    padding: 24px 0; }
+    header.header .welcome .name {
+      display: block;
+      float: left;
+      font-size: 12px;
+      color: #59A2E7;
+      margin-left: 4px; }
+    header.header .welcome .logout {
+      display: block;
+      float: left;
+      font-size: 7px;
+      color: #30506D;
+      margin-left: 7px;
+      text-decoration: underline; }
+    header.header .welcome .text {
+      display: block;
+      font-size: 10px;
+      color: #AAAAAA;
+      float: left; }
+
+/*main content styles */
+.main.login {
+  background: url("../i/login-bg.jpg") 50% 50%;
+  background-size: 100% auto;
+  padding: 0;
+  /*video-holder */ }
+  @media (orientation: portrait) {
+    .main.login {
+      background-size: auto 100%; } }
+  .main.login .video-holder-login {
+    display: block;
+    width: 478px;
+    margin: 56px auto 45px;
+    background: #000; }
+    .main.login .video-holder-login .embed-responsive {
+      border: 1px solid #b3b0b0;
+      height: 264px;
+      padding: 0; }
+
+.main {
+  display: block;
+  position: absolute;
+  top: 68px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background: #eeeeee;
+  transition: padding-left 0.4s; }
+
+.show-menu .main {
+  padding-left: 191px; }
+
+/*video-holder */
+.video-holder {
+  display: block;
+  height: 288px;
+  border: 1px solid #969696;
+  background: #fafafa; }
+  .video-holder .video {
+    display: block;
+    width: 412px;
+    height: 215px;
+    margin: 33px auto;
+    background: #dfdfdf; }
+    .video-holder .video .embed-responsive {
+      border: 1px solid #b5b2b2;
+      height: 215px;
+      padding: 0; }
+
+/*loginModal */
+#loginModal .modal-dialog {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px; }
+  #loginModal .modal-dialog .btn {
+    display: block;
+    margin: 0 auto;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #4A8FE1;
+    color: #4A8FE1;
+    font-size: 12px;
+    font-weight: 300;
+    float: right;
+    width: 100px;
+    line-height: 20px;
+    padding: 5px 12px; }
+
+/*form styles */
+form.form.get-start {
+  width: 632px; }
+
+form.form.login .modal-body,
+form.form.get-start .modal-body {
+  padding: 30px 60px; }
+form.form.login .row,
+form.form.get-start .row {
+  margin: 0 -48px 16px; }
+  form.form.login .row .col-xs-6,
+  form.form.get-start .row .col-xs-6 {
+    padding: 0 48px; }
+form.form.login .button-row,
+form.form.get-start .button-row {
+  display: block;
+  margin: 48px 0;
+  text-align: center;
+  position: relative; }
+  form.form.login .button-row .btn,
+  form.form.get-start .button-row .btn {
+    display: block;
+    margin: 0 auto;
+    width: 256px;
+    height: 44px;
+    border-radius: 7px;
+    background: #E24A5C;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+    box-shadow: 0 2px 2px #5a5959;
+    border: none;
+    line-height: 20px;
+    padding: 12px; }
+  form.form.login .button-row input,
+  form.form.get-start .button-row input {
+    display: block;
+    border: 1px solid #b5b2b2;
+    background: #ffffff;
+    height: 45px;
+    color: #333;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 19px;
+    padding: 12px 5px 12px 20px;
+    width: 100%;
+    box-shadow: none;
+    outline: none; }
+  form.form.login .button-row input.placeholder,
+  form.form.get-start .button-row input.placeholder {
+    color: #6A6A6A; }
+
+form.form {
+  display: block;
+  margin: 0 auto; }
+  form.form .input-group.has-error input {
+    border: 1px solid #a94442; }
+  form.form .input-group {
+    width: 100%; }
+    form.form .input-group input {
+      display: block;
+      border: 1px solid #b5b2b2;
+      background: #ffffff;
+      height: 45px;
+      color: #333;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 19px;
+      padding: 12px 5px 12px 20px;
+      width: 100%;
+      box-shadow: none;
+      outline: none; }
+    form.form .input-group input.placeholder {
+      color: #6A6A6A; }
+    form.form .input-group input:-ms-input-placeholder {
+      color: #6A6A6A; }
+    form.form .input-group input::-webkit-input-placeholder {
+      color: #6A6A6A; }
+    form.form .input-group input::-moz-placeholder {
+      color: #6A6A6A;
+      opacity: 1; }
+
+/*sidebar */
+.show-menu .sidebar {
+  left: 0; }
+
+.sidebar {
+  display: block;
+  position: absolute;
+  left: -192px;
+  top: 68px;
+  width: 191px;
+  bottom: 0;
+  z-index: 10;
+  overflow: auto;
+  border-right: 1px solid #b1b1b1;
+  transition: left 0.4s;
+  padding-top: 26px;
+  letter-spacing: 1px;
+  background: #535353;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzUzNTM1MyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxZjFmMWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #535353 0%, #1f1f1f 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #535353), color-stop(100%, #1f1f1f));
+  background: -webkit-linear-gradient(top, #535353 0%, #1f1f1f 100%);
+  background: -o-linear-gradient(top, #535353 0%, #1f1f1f 100%);
+  background: -ms-linear-gradient(top, #535353 0%, #1f1f1f 100%);
+  background: linear-gradient(to bottom, #535353 0%, #1f1f1f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#535353', endColorstr='#1f1f1f',GradientType=0 ); }
+  .sidebar .progress-data {
+    display: block;
+    height: 53px;
+    line-height: 26px;
+    padding: 13px 0 13px 15px; }
+    .sidebar .progress-data .text {
+      float: left;
+      font-size: 12px;
+      color: #aaa;
+      padding-right: 11px; }
+    .sidebar .progress-data .val {
+      display: block;
+      float: left;
+      font-size: 18px;
+      color: #fff; }
+  .sidebar .border {
+    display: block;
+    width: 42px;
+    border-bottom: 1px solid #b1b1b1;
+    margin: 0 0 21px 15px; }
+  .sidebar nav.nav {
+    display: block; }
+    .sidebar nav.nav a {
+      height: 42px;
+      line-height: 42px;
+      font-size: 10px;
+      color: #aaaaaa;
+      display: table;
+      text-decoration: none;
+      width: 100%;
+      transition: background-color 0.4s;
+      position: relative; }
+      .sidebar nav.nav a span {
+        padding-left: 55px;
+        vertical-align: middle;
+        line-height: 13px;
+        display: table-cell; }
+    .sidebar nav.nav a:hover {
+      background-color: #454545; }
+    .sidebar nav.nav a.current {
+      background-color: #5f5f5f;
+      cursor: default; }
+    .sidebar nav.nav a.complete,
+    .sidebar nav.nav a.current.finished {
+      background-image: url("../i/1X/progress.png");
+      background-repeat: no-repeat;
+      background-position: 16px -99px;
+      color: #0CB4AB; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        .sidebar nav.nav a.complete,
+        .sidebar nav.nav a.current.finished {
+          /* on retina, use image that's scaled by 2 */
+          background-image: url("../i/2X/progress.png");
+          background-size: 33px; } }
+    .sidebar nav.nav a:first-child.complete {
+      background-position: 16px -51px; }
+    .sidebar nav.nav a:first-child.prevComplete {
+      background-position: 16px -3px; }
+    .sidebar nav.nav a.prevComplete {
+      background-position: 16px -147px; }
+    .sidebar nav.nav a.prevComplete.final-step {
+      background-position: 16px -195px; }
+    .sidebar nav.nav a.current.finished {
+      background-position: 16px -244px;
+      background-color: transparent;
+      color: #f8b32d; }
+
+/*section-holder */
+.section-holder {
+  position: relative;
+  height: 100%;
+  overflow: hidden; }
+  .section-holder section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    overflow: auto;
+    display: none; }
+  .section-holder section.active {
+    display: block; }
+  .section-holder section.border-top {
+    border-top: 1px solid #969696;
+    background: #fafafa; }
+
+/*form style */
+main.main form {
+  display: block;
+  margin: 0 auto;
+  letter-spacing: 0.5px; }
+  main.main form .form-title {
+    font-size: 12px;
+    line-height: 50px;
+    height: 51px;
+    text-align: center;
+    color: #aaaaaa;
+    font-weight: 300;
+    margin: 0;
+    font-style: italic; }
+  main.main form .button-bar {
+    display: block;
+    margin: 22px 0 20px;
+    position: relative; }
+    main.main form .button-bar .btn {
+      height: 34px;
+      width: 160px;
+      text-align: center;
+      border-radius: 3px;
+      background: #1aa68f;
+      color: #ffffff;
+      font-size: 10px;
+      line-height: 20px;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 2px 2px #908f8f; }
+    main.main form .button-bar .btn.disabled {
+      background: url("../i/1X/button-disable-bg.png");
+      opacity: 1;
+      box-shadow: none; }
+
+form.step-1,
+form.step-2 {
+  width: 412px; }
+  form.step-1 .btn-group,
+  form.step-2 .btn-group {
+    width: 100%; }
+    form.step-1 .btn-group label,
+    form.step-2 .btn-group label {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      border-radius: 0;
+      height: 45px;
+      border: 1px solid #b5b2b2;
+      background: #ffffff;
+      line-height: 31px;
+      font-size: 12px;
+      color: #C7C5C3; }
+    form.step-1 .btn-group label.active,
+    form.step-2 .btn-group label.active {
+      background: #4a8fe1;
+      color: #ffffff;
+      box-shadow: none; }
+
+/*step-3 */
+#utilitiesApiDiv{
+    display: none;
+    margin-top: 20px
+}
+/*
+
+#uploadFileNameDiv{
+    margin: auto;
+}
+*/
+
+
+
+/*Dialog Box*/
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 601px;
+	position: relative;
+	margin: 10% auto;
+	padding: 0px 0px 50px 0px;
+	border-radius: 0px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+
+.closeBtn {
+	background: #59a2e7;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+/*	//-moz-box-shadow: 1px 1px 3px #000;*/
+/*	//-webkit-box-shadow: 1px 1px 3px #000;*/
+/*	//box-shadow: 1px 1px 3px #000;*/
+}
+iframe{
+  border: 0px;
+}
+
+.done{
+	background: #59a2e7;
+	color: #FFFFFF;
+    height: 55px;
+	line-height: 48px;
+	position: absolute;
+	right: 0px;
+    top: 450px;
+	text-align: center;
+	width: 601px;
+	text-decoration: none;
+	font-weight: bold;
+/*	//-webkit-border-radius: 12px;*/
+/*	//-moz-border-radius: 12px;*/
+	border-radius: 0px;
+/*	//-moz-box-shadow: 1px 1px 3px #000;*/
+/*	//-webkit-box-shadow: 1px 1px 3px #000;*/
+/*	//box-shadow: 1px 1px 3px #000;*/
+}
+
+.closeBtn:hover { background: #4a8fe1; }
+.done:hover { background: #4a8fe1; }
+
+/*Dialog Box*/
+
+#uploadFileNameDivP{
+    padding-top: 30px;
+    text-align: center;
+}
+
+
+.main form.step-3 {
+  padding-top: 44px;
+  width: 603px; }
+  .main form.step-3 .action-button-holder {
+    float: left;
+    width: 247px;
+    position: relative; }
+    .main form.step-3 .action-button-holder label {
+      display: block;
+      height: 52px;
+      margin: 0;
+      font-size: 12px;
+      padding: 16px 0;
+      line-height: 20px;
+      font-weight: 300;
+      color: #59a2e7;
+      text-align: center; }
+    .main form.step-3 .action-button-holder .btn {
+      height: 56px;
+      font-size: 10px;
+      color: #ffffff;
+      background: #4a8fe1;
+      width: 100%;
+      border-radius: 4px;
+      line-height: 43px;
+      box-shadow: 0 2px 2px #727171; }
+  .main form.step-3 .file-input {
+    display: block;
+    position: absolute;
+    left: -2000px; }
+  .main form.step-3 .separator {
+    display: block;
+    float: left;
+    width: 107px;
+    padding: 52px 13px 0;
+    position: relative;
+    text-align: center; }
+    .main form.step-3 .separator .text {
+      display: inline-block;
+      position: relative;
+      z-index: 2;
+      font-size: 14px;
+      line-height: 56px;
+      background: #eeeeee;
+      width: 35px;
+      color: #717171;
+      font-style: italic; }
+    .main form.step-3 .separator .border {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid #a3a3a3;
+      display: block;
+      top: -28px; }
+  .main form.step-3 .button-bar {
+    margin-top: 30px; }
+
+/*step-4 */
+main.main form.step-4 {
+  width: 569px; }
+  main.main form.step-4 .button-bar {
+    margin-top: 9px; }
+  main.main form.step-4 .phone-number {
+    display: block;
+    text-align: center;
+    padding-bottom: 29px;
+    font-size: 0;
+    border-bottom: 1px solid #cacaca; }
+    main.main form.step-4 .phone-number h3 {
+      display: block;
+      text-align: center;
+      font-size: 12px;
+      color: #aaaaaa;
+      margin: 16px 0 0;
+      line-height: 40px; }
+    main.main form.step-4 .phone-number .numbers {
+      display: inline-block; }
+      main.main form.step-4 .phone-number .numbers input {
+        display: block;
+        float: left;
+        height: 31px;
+        border: 1px solid #b5b2b2;
+        width: 63px;
+        background: #ffffff;
+        text-align: center;
+        padding: 7px 0;
+        font-size: 12px;
+        color: #30506D;
+        line-height: 15px; }
+      main.main form.step-4 .phone-number .numbers input.placeholder {
+        color: #939eae; }
+      main.main form.step-4 .phone-number .numbers input:-ms-input-placeholder {
+        color: #939eae; }
+      main.main form.step-4 .phone-number .numbers input::-webkit-input-placeholder {
+        color: #939eae; }
+      main.main form.step-4 .phone-number .numbers input::-moz-placeholder {
+        color: #939eae;
+        opacity: 1; }
+      main.main form.step-4 .phone-number .numbers .sep {
+        display: block;
+        float: left;
+        width: 12px;
+        border-top: 1px solid #dbdbdb;
+        margin: 15px 3px; }
+  main.main form.step-4 .calendar-holder {
+    display: block;
+    float: left;
+    width: 285px;
+    position: relative; }
+    main.main form.step-4 .calendar-holder .border {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-right: 1px solid #cacaca;
+      height: 208px; }
+    main.main form.step-4 .calendar-holder .datePicker {
+      display: block;
+      width: 230px;
+      min-height: 215px;
+      background: #ffffff;
+      box-shadow: 0 2px 2px #a1a0a0;
+      margin-top: 27px;
+      padding: 3px 17px; }
+      main.main form.step-4 .calendar-holder .datePicker .ui-datepicker-header {
+        border-bottom: 1px solid #eef0f2;
+        margin-bottom: 14px; }
+      main.main form.step-4 .calendar-holder .datePicker .ui-datepicker-prev {
+        position: relative;
+        float: left;
+        height: 38px;
+        width: 20px;
+        font-size: 0;
+        cursor: pointer;
+        background: url("../i/1X/calendar-arrow.png") no-repeat 2px 0; }
+        @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+          main.main form.step-4 .calendar-holder .datePicker .ui-datepicker-prev {
+            /* on retina, use image that's scaled by 2 */
+            background-image: url("../i/2X/calendar-arrow.png");
+            background-size: 9px; } }
+      main.main form.step-4 .calendar-holder .datePicker .ui-datepicker-next {
+        position: relative;
+        float: right;
+        height: 38px;
+        width: 20px;
+        font-size: 0;
+        cursor: pointer;
+        background: url("../i/1X/calendar-arrow.png") no-repeat 100% -38px; }
+        @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+          main.main form.step-4 .calendar-holder .datePicker .ui-datepicker-next {
+            /* on retina, use image that's scaled by 2 */
+            background-image: url("../i/2X/calendar-arrow.png");
+            background-size: 9px; } }
+      main.main form.step-4 .calendar-holder .datePicker .ui-datepicker-title {
+        display: block;
+        line-height: 38px;
+        text-align: center;
+        font-size: 13px;
+        color: #929292;
+        font-weight: 300;
+        text-transform: uppercase; }
+      main.main form.step-4 .calendar-holder .datePicker table {
+        width: 100%; }
+        main.main form.step-4 .calendar-holder .datePicker table th {
+          text-align: center;
+          font-size: 9px;
+          font-weight: 300;
+          text-transform: uppercase;
+          color: #8B8B8B;
+          height: 16px;
+          vertical-align: middle; }
+        main.main form.step-4 .calendar-holder .datePicker table td {
+          text-align: center;
+          font-size: 9px;
+          font-weight: 300;
+          text-transform: uppercase;
+          color: #8B8B8B;
+          height: 26px;
+          vertical-align: middle; }
+          main.main form.step-4 .calendar-holder .datePicker table td a {
+            color: inherit;
+            display: block;
+            height: 15px;
+            line-height: 15px; }
+          main.main form.step-4 .calendar-holder .datePicker table td a.ui-state-active {
+            background: #4a8fe1;
+            color: #ffffff;
+            box-shadow: 0 2px 2px #c6c5c5;
+            margin: 0 -1px; }
+        main.main form.step-4 .calendar-holder .datePicker table th:first-child,
+        main.main form.step-4 .calendar-holder .datePicker table td.ui-datepicker-other-month {
+          color: #D4D4D4; }
+  main.main form.step-4 .time-holder {
+    float: left;
+    width: 284px;
+    padding: 31px 0 0 77px; }
+    main.main form.step-4 .time-holder .btn-group {
+      width: 100%; }
+      main.main form.step-4 .time-holder .btn-group label {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 0;
+        height: 55px;
+        border: 1px solid #b5b2b2;
+        background: #ffffff;
+        line-height: 41px;
+        font-size: 12px;
+        color: #aaaaaa; }
+      main.main form.step-4 .time-holder .btn-group label.active {
+        background: #4a8fe1;
+        color: #ffffff;
+        box-shadow: none; }
+
+/*step-5 */
+form.step-5,
+form.step-6 {
+  width: 412px; }
+  form.step-5 .btn-group,
+  form.step-6 .btn-group {
+    width: 100%; }
+    form.step-5 .btn-group label,
+    form.step-6 .btn-group label {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      border-radius: 0;
+      height: 45px;
+      border: 1px solid #b5b2b2;
+      background: #ffffff;
+      line-height: 31px;
+      font-size: 10px;
+      color: #aaaaaa; }
+    form.step-5 .btn-group label.active,
+    form.step-6 .btn-group label.active {
+      background: #4a8fe1;
+      color: #ffffff;
+      box-shadow: none; }
+  form.step-5 .btn-group.inline.solar,
+  form.step-6 .btn-group.inline.solar {
+    width: 176px; }
+  form.step-5 .btn-group.inline.electric-room,
+  form.step-6 .btn-group.inline.electric-room {
+    width: 230px; }
+  form.step-5 .btn-group.inline.roof,
+  form.step-6 .btn-group.inline.roof {
+    width: 179px; }
+  form.step-5 .btn-group.inline label,
+  form.step-6 .btn-group.inline label {
+    display: inline-block;
+    height: 40px;
+    line-height: 26px; }
+  form.step-5 .btn-group.inline label.first,
+  form.step-6 .btn-group.inline label.first {
+    float: left; }
+  form.step-5 .btn-group.inline label.last,
+  form.step-6 .btn-group.inline label.last {
+    float: right; }
+  form.step-5 .btn-group.inline label.solar,
+  form.step-6 .btn-group.inline label.solar {
+    width: 82px; }
+  form.step-5 .btn-group.inline label.room,
+  form.step-6 .btn-group.inline label.room {
+    width: 110px; }
+
+/*step 5 & 6 */
+main.main form.step-5,
+main.main form.step-6,
+main.main form.step-7 {
+  width: 690px; }
+  main.main form.step-5 .inputs,
+  main.main form.step-6 .inputs,
+  main.main form.step-7 .inputs {
+    display: block;
+    padding-left: 58px; }
+    main.main form.step-5 .inputs .right-side,
+    main.main form.step-6 .inputs .right-side,
+    main.main form.step-7 .inputs .right-side {
+      padding-left: 100px;
+      width: 331px;
+      position: relative;
+      float: left; }
+    main.main form.step-5 .inputs .left-side,
+    main.main form.step-6 .inputs .left-side,
+    main.main form.step-7 .inputs .left-side {
+      float: left;
+      width: 288px;
+      position: relative; }
+    main.main form.step-5 .inputs .left-side .border,
+    main.main form.step-5 .inputs .right-side .border,
+    main.main form.step-6 .inputs .left-side .border,
+    main.main form.step-6 .inputs .right-side .border,
+    main.main form.step-7 .inputs .left-side .border,
+    main.main form.step-7 .inputs .right-side .border {
+      position: absolute;
+      right: 0;
+      top: 31px;
+      border-right: 1px solid #d0d0d0;
+      height: 160px; }
+    main.main form.step-5 .inputs .left-side .input-row.more-margin,
+    main.main form.step-5 .inputs .right-side .input-row.more-margin,
+    main.main form.step-6 .inputs .left-side .input-row.more-margin,
+    main.main form.step-6 .inputs .right-side .input-row.more-margin,
+    main.main form.step-7 .inputs .left-side .input-row.more-margin,
+    main.main form.step-7 .inputs .right-side .input-row.more-margin {
+      margin-bottom: 26px; }
+    main.main form.step-5 .inputs .left-side .input-row,
+    main.main form.step-5 .inputs .right-side .input-row,
+    main.main form.step-6 .inputs .left-side .input-row,
+    main.main form.step-6 .inputs .right-side .input-row,
+    main.main form.step-7 .inputs .left-side .input-row,
+    main.main form.step-7 .inputs .right-side .input-row {
+      display: block;
+      margin-bottom: 10px; }
+    main.main form.step-5 .inputs .left-side .input-row > label,
+    main.main form.step-5 .inputs .left-side .group > label,
+    main.main form.step-5 .inputs .right-side .input-row > label,
+    main.main form.step-5 .inputs .right-side .group > label,
+    main.main form.step-6 .inputs .left-side .input-row > label,
+    main.main form.step-6 .inputs .left-side .group > label,
+    main.main form.step-6 .inputs .right-side .input-row > label,
+    main.main form.step-6 .inputs .right-side .group > label,
+    main.main form.step-7 .inputs .left-side .input-row > label,
+    main.main form.step-7 .inputs .left-side .group > label,
+    main.main form.step-7 .inputs .right-side .input-row > label,
+    main.main form.step-7 .inputs .right-side .group > label {
+      line-height: 27px;
+      display: block;
+      font-weight: 300;
+      color: #aaa;
+      font-size: 10px;
+      padding: 0;
+      margin: 0; }
+    main.main form.step-5 .inputs .left-side .input-row .dropdown.input button,
+    main.main form.step-5 .inputs .left-side .group .dropdown.input button,
+    main.main form.step-5 .inputs .right-side .input-row .dropdown.input button,
+    main.main form.step-5 .inputs .right-side .group .dropdown.input button,
+    main.main form.step-6 .inputs .left-side .input-row .dropdown.input button,
+    main.main form.step-6 .inputs .left-side .group .dropdown.input button,
+    main.main form.step-6 .inputs .right-side .input-row .dropdown.input button,
+    main.main form.step-6 .inputs .right-side .group .dropdown.input button,
+    main.main form.step-7 .inputs .left-side .input-row .dropdown.input button,
+    main.main form.step-7 .inputs .left-side .group .dropdown.input button,
+    main.main form.step-7 .inputs .right-side .input-row .dropdown.input button,
+    main.main form.step-7 .inputs .right-side .group .dropdown.input button {
+      margin-right: 0; }
+    main.main form.step-5 .inputs .left-side .input-row .input.year-select button,
+    main.main form.step-5 .inputs .left-side .group .input.year-select button,
+    main.main form.step-5 .inputs .right-side .input-row .input.year-select button,
+    main.main form.step-5 .inputs .right-side .group .input.year-select button,
+    main.main form.step-6 .inputs .left-side .input-row .input.year-select button,
+    main.main form.step-6 .inputs .left-side .group .input.year-select button,
+    main.main form.step-6 .inputs .right-side .input-row .input.year-select button,
+    main.main form.step-6 .inputs .right-side .group .input.year-select button,
+    main.main form.step-7 .inputs .left-side .input-row .input.year-select button,
+    main.main form.step-7 .inputs .left-side .group .input.year-select button,
+    main.main form.step-7 .inputs .right-side .input-row .input.year-select button,
+    main.main form.step-7 .inputs .right-side .group .input.year-select button {
+      width: 98px; }
+    main.main form.step-5 .inputs .left-side .input-row .input.wiring button,
+    main.main form.step-5 .inputs .left-side .group .input.wiring button,
+    main.main form.step-5 .inputs .right-side .input-row .input.wiring button,
+    main.main form.step-5 .inputs .right-side .group .input.wiring button,
+    main.main form.step-6 .inputs .left-side .input-row .input.wiring button,
+    main.main form.step-6 .inputs .left-side .group .input.wiring button,
+    main.main form.step-6 .inputs .right-side .input-row .input.wiring button,
+    main.main form.step-6 .inputs .right-side .group .input.wiring button,
+    main.main form.step-7 .inputs .left-side .input-row .input.wiring button,
+    main.main form.step-7 .inputs .left-side .group .input.wiring button,
+    main.main form.step-7 .inputs .right-side .input-row .input.wiring button,
+    main.main form.step-7 .inputs .right-side .group .input.wiring button {
+      width: 240px; }
+    main.main form.step-5 .inputs .left-side .input-row .input.roof button,
+    main.main form.step-5 .inputs .left-side .group .input.roof button,
+    main.main form.step-5 .inputs .right-side .input-row .input.roof button,
+    main.main form.step-5 .inputs .right-side .group .input.roof button,
+    main.main form.step-6 .inputs .left-side .input-row .input.roof button,
+    main.main form.step-6 .inputs .left-side .group .input.roof button,
+    main.main form.step-6 .inputs .right-side .input-row .input.roof button,
+    main.main form.step-6 .inputs .right-side .group .input.roof button,
+    main.main form.step-7 .inputs .left-side .input-row .input.roof button,
+    main.main form.step-7 .inputs .left-side .group .input.roof button,
+    main.main form.step-7 .inputs .right-side .input-row .input.roof button,
+    main.main form.step-7 .inputs .right-side .group .input.roof button {
+      width: 244px; }
+    main.main form.step-5 .inputs .left-side .input-row .input,
+    main.main form.step-5 .inputs .left-side .group .input,
+    main.main form.step-5 .inputs .right-side .input-row .input,
+    main.main form.step-5 .inputs .right-side .group .input,
+    main.main form.step-6 .inputs .left-side .input-row .input,
+    main.main form.step-6 .inputs .left-side .group .input,
+    main.main form.step-6 .inputs .right-side .input-row .input,
+    main.main form.step-6 .inputs .right-side .group .input,
+    main.main form.step-7 .inputs .left-side .input-row .input,
+    main.main form.step-7 .inputs .left-side .group .input,
+    main.main form.step-7 .inputs .right-side .input-row .input,
+    main.main form.step-7 .inputs .right-side .group .input {
+      float: left;
+      height: 40px; }
+      main.main form.step-5 .inputs .left-side .input-row .input > button, main.main form.step-5 .inputs .left-side .input-row .input > input,
+      main.main form.step-5 .inputs .left-side .group .input > button,
+      main.main form.step-5 .inputs .left-side .group .input > input,
+      main.main form.step-5 .inputs .right-side .input-row .input > button,
+      main.main form.step-5 .inputs .right-side .input-row .input > input,
+      main.main form.step-5 .inputs .right-side .group .input > button,
+      main.main form.step-5 .inputs .right-side .group .input > input,
+      main.main form.step-6 .inputs .left-side .input-row .input > button,
+      main.main form.step-6 .inputs .left-side .input-row .input > input,
+      main.main form.step-6 .inputs .left-side .group .input > button,
+      main.main form.step-6 .inputs .left-side .group .input > input,
+      main.main form.step-6 .inputs .right-side .input-row .input > button,
+      main.main form.step-6 .inputs .right-side .input-row .input > input,
+      main.main form.step-6 .inputs .right-side .group .input > button,
+      main.main form.step-6 .inputs .right-side .group .input > input,
+      main.main form.step-7 .inputs .left-side .input-row .input > button,
+      main.main form.step-7 .inputs .left-side .input-row .input > input,
+      main.main form.step-7 .inputs .left-side .group .input > button,
+      main.main form.step-7 .inputs .left-side .group .input > input,
+      main.main form.step-7 .inputs .right-side .input-row .input > button,
+      main.main form.step-7 .inputs .right-side .input-row .input > input,
+      main.main form.step-7 .inputs .right-side .group .input > button,
+      main.main form.step-7 .inputs .right-side .group .input > input {
+        height: 40px;
+        background: #ffffff;
+        border: 1px solid #c6c4c4;
+        padding: 10px 30px 10px 15px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
+        font-size: 12px;
+        color: #9B9B9B;
+        min-width: 64px;
+        text-align: left;
+        margin-right: 9px; }
+        main.main form.step-5 .inputs .left-side .input-row .input > button .sub, main.main form.step-5 .inputs .left-side .input-row .input > input .sub,
+        main.main form.step-5 .inputs .left-side .group .input > button .sub,
+        main.main form.step-5 .inputs .left-side .group .input > input .sub,
+        main.main form.step-5 .inputs .right-side .input-row .input > button .sub,
+        main.main form.step-5 .inputs .right-side .input-row .input > input .sub,
+        main.main form.step-5 .inputs .right-side .group .input > button .sub,
+        main.main form.step-5 .inputs .right-side .group .input > input .sub,
+        main.main form.step-6 .inputs .left-side .input-row .input > button .sub,
+        main.main form.step-6 .inputs .left-side .input-row .input > input .sub,
+        main.main form.step-6 .inputs .left-side .group .input > button .sub,
+        main.main form.step-6 .inputs .left-side .group .input > input .sub,
+        main.main form.step-6 .inputs .right-side .input-row .input > button .sub,
+        main.main form.step-6 .inputs .right-side .input-row .input > input .sub,
+        main.main form.step-6 .inputs .right-side .group .input > button .sub,
+        main.main form.step-6 .inputs .right-side .group .input > input .sub,
+        main.main form.step-7 .inputs .left-side .input-row .input > button .sub,
+        main.main form.step-7 .inputs .left-side .input-row .input > input .sub,
+        main.main form.step-7 .inputs .left-side .group .input > button .sub,
+        main.main form.step-7 .inputs .left-side .group .input > input .sub,
+        main.main form.step-7 .inputs .right-side .input-row .input > button .sub,
+        main.main form.step-7 .inputs .right-side .input-row .input > input .sub,
+        main.main form.step-7 .inputs .right-side .group .input > button .sub,
+        main.main form.step-7 .inputs .right-side .group .input > input .sub {
+          display: inline-block;
+          padding-right: 17px;
+          color: #cbcbcb; }
+        main.main form.step-5 .inputs .left-side .input-row .input > button span.desc, main.main form.step-5 .inputs .left-side .input-row .input > input span.desc,
+        main.main form.step-5 .inputs .left-side .group .input > button span.desc,
+        main.main form.step-5 .inputs .left-side .group .input > input span.desc,
+        main.main form.step-5 .inputs .right-side .input-row .input > button span.desc,
+        main.main form.step-5 .inputs .right-side .input-row .input > input span.desc,
+        main.main form.step-5 .inputs .right-side .group .input > button span.desc,
+        main.main form.step-5 .inputs .right-side .group .input > input span.desc,
+        main.main form.step-6 .inputs .left-side .input-row .input > button span.desc,
+        main.main form.step-6 .inputs .left-side .input-row .input > input span.desc,
+        main.main form.step-6 .inputs .left-side .group .input > button span.desc,
+        main.main form.step-6 .inputs .left-side .group .input > input span.desc,
+        main.main form.step-6 .inputs .right-side .input-row .input > button span.desc,
+        main.main form.step-6 .inputs .right-side .input-row .input > input span.desc,
+        main.main form.step-6 .inputs .right-side .group .input > button span.desc,
+        main.main form.step-6 .inputs .right-side .group .input > input span.desc,
+        main.main form.step-7 .inputs .left-side .input-row .input > button span.desc,
+        main.main form.step-7 .inputs .left-side .input-row .input > input span.desc,
+        main.main form.step-7 .inputs .left-side .group .input > button span.desc,
+        main.main form.step-7 .inputs .left-side .group .input > input span.desc,
+        main.main form.step-7 .inputs .right-side .input-row .input > button span.desc,
+        main.main form.step-7 .inputs .right-side .input-row .input > input span.desc,
+        main.main form.step-7 .inputs .right-side .group .input > button span.desc,
+        main.main form.step-7 .inputs .right-side .group .input > input span.desc {
+          padding-left: 13px;
+          color: #aaaaaa; }
+        main.main form.step-5 .inputs .left-side .input-row .input > button .caret, main.main form.step-5 .inputs .left-side .input-row .input > input .caret,
+        main.main form.step-5 .inputs .left-side .group .input > button .caret,
+        main.main form.step-5 .inputs .left-side .group .input > input .caret,
+        main.main form.step-5 .inputs .right-side .input-row .input > button .caret,
+        main.main form.step-5 .inputs .right-side .input-row .input > input .caret,
+        main.main form.step-5 .inputs .right-side .group .input > button .caret,
+        main.main form.step-5 .inputs .right-side .group .input > input .caret,
+        main.main form.step-6 .inputs .left-side .input-row .input > button .caret,
+        main.main form.step-6 .inputs .left-side .input-row .input > input .caret,
+        main.main form.step-6 .inputs .left-side .group .input > button .caret,
+        main.main form.step-6 .inputs .left-side .group .input > input .caret,
+        main.main form.step-6 .inputs .right-side .input-row .input > button .caret,
+        main.main form.step-6 .inputs .right-side .input-row .input > input .caret,
+        main.main form.step-6 .inputs .right-side .group .input > button .caret,
+        main.main form.step-6 .inputs .right-side .group .input > input .caret,
+        main.main form.step-7 .inputs .left-side .input-row .input > button .caret,
+        main.main form.step-7 .inputs .left-side .input-row .input > input .caret,
+        main.main form.step-7 .inputs .left-side .group .input > button .caret,
+        main.main form.step-7 .inputs .left-side .group .input > input .caret,
+        main.main form.step-7 .inputs .right-side .input-row .input > button .caret,
+        main.main form.step-7 .inputs .right-side .input-row .input > input .caret,
+        main.main form.step-7 .inputs .right-side .group .input > button .caret,
+        main.main form.step-7 .inputs .right-side .group .input > input .caret {
+          position: absolute;
+          right: 12px;
+          top: 17px;
+          margin: 0;
+          border-top-width: 6px;
+          border-right-width: 6px;
+          border-left-width: 6px; }
+      main.main form.step-5 .inputs .left-side .input-row .input > input,
+      main.main form.step-5 .inputs .left-side .group .input > input,
+      main.main form.step-5 .inputs .right-side .input-row .input > input,
+      main.main form.step-5 .inputs .right-side .group .input > input,
+      main.main form.step-6 .inputs .left-side .input-row .input > input,
+      main.main form.step-6 .inputs .left-side .group .input > input,
+      main.main form.step-6 .inputs .right-side .input-row .input > input,
+      main.main form.step-6 .inputs .right-side .group .input > input,
+      main.main form.step-7 .inputs .left-side .input-row .input > input,
+      main.main form.step-7 .inputs .left-side .group .input > input,
+      main.main form.step-7 .inputs .right-side .input-row .input > input,
+      main.main form.step-7 .inputs .right-side .group .input > input {
+        padding-right: 15px; }
+      main.main form.step-5 .inputs .left-side .input-row .input .dropdown-menu,
+      main.main form.step-5 .inputs .left-side .group .input .dropdown-menu,
+      main.main form.step-5 .inputs .right-side .input-row .input .dropdown-menu,
+      main.main form.step-5 .inputs .right-side .group .input .dropdown-menu,
+      main.main form.step-6 .inputs .left-side .input-row .input .dropdown-menu,
+      main.main form.step-6 .inputs .left-side .group .input .dropdown-menu,
+      main.main form.step-6 .inputs .right-side .input-row .input .dropdown-menu,
+      main.main form.step-6 .inputs .right-side .group .input .dropdown-menu,
+      main.main form.step-7 .inputs .left-side .input-row .input .dropdown-menu,
+      main.main form.step-7 .inputs .left-side .group .input .dropdown-menu,
+      main.main form.step-7 .inputs .right-side .input-row .input .dropdown-menu,
+      main.main form.step-7 .inputs .right-side .group .input .dropdown-menu {
+        background: #ffffff;
+        border: 1px solid #c6c4c4;
+        left: 0;
+        border-radius: 0;
+        box-shadow: none;
+        margin-top: 3px;
+        max-height: 200px;
+        overflow: auto;
+        min-width: 0;
+        width: 100%;
+        padding: 2px 0; }
+        main.main form.step-5 .inputs .left-side .input-row .input .dropdown-menu li,
+        main.main form.step-5 .inputs .left-side .group .input .dropdown-menu li,
+        main.main form.step-5 .inputs .right-side .input-row .input .dropdown-menu li,
+        main.main form.step-5 .inputs .right-side .group .input .dropdown-menu li,
+        main.main form.step-6 .inputs .left-side .input-row .input .dropdown-menu li,
+        main.main form.step-6 .inputs .left-side .group .input .dropdown-menu li,
+        main.main form.step-6 .inputs .right-side .input-row .input .dropdown-menu li,
+        main.main form.step-6 .inputs .right-side .group .input .dropdown-menu li,
+        main.main form.step-7 .inputs .left-side .input-row .input .dropdown-menu li,
+        main.main form.step-7 .inputs .left-side .group .input .dropdown-menu li,
+        main.main form.step-7 .inputs .right-side .input-row .input .dropdown-menu li,
+        main.main form.step-7 .inputs .right-side .group .input .dropdown-menu li {
+          display: block;
+          padding: 1px 2px; }
+          main.main form.step-5 .inputs .left-side .input-row .input .dropdown-menu li span,
+          main.main form.step-5 .inputs .left-side .group .input .dropdown-menu li span,
+          main.main form.step-5 .inputs .right-side .input-row .input .dropdown-menu li span,
+          main.main form.step-5 .inputs .right-side .group .input .dropdown-menu li span,
+          main.main form.step-6 .inputs .left-side .input-row .input .dropdown-menu li span,
+          main.main form.step-6 .inputs .left-side .group .input .dropdown-menu li span,
+          main.main form.step-6 .inputs .right-side .input-row .input .dropdown-menu li span,
+          main.main form.step-6 .inputs .right-side .group .input .dropdown-menu li span,
+          main.main form.step-7 .inputs .left-side .input-row .input .dropdown-menu li span,
+          main.main form.step-7 .inputs .left-side .group .input .dropdown-menu li span,
+          main.main form.step-7 .inputs .right-side .input-row .input .dropdown-menu li span,
+          main.main form.step-7 .inputs .right-side .group .input .dropdown-menu li span {
+            display: block;
+            line-height: 16px;
+            font-size: 10px;
+            color: #cbcbcb; }
+          main.main form.step-5 .inputs .left-side .input-row .input .dropdown-menu li a,
+          main.main form.step-5 .inputs .left-side .group .input .dropdown-menu li a,
+          main.main form.step-5 .inputs .right-side .input-row .input .dropdown-menu li a,
+          main.main form.step-5 .inputs .right-side .group .input .dropdown-menu li a,
+          main.main form.step-6 .inputs .left-side .input-row .input .dropdown-menu li a,
+          main.main form.step-6 .inputs .left-side .group .input .dropdown-menu li a,
+          main.main form.step-6 .inputs .right-side .input-row .input .dropdown-menu li a,
+          main.main form.step-6 .inputs .right-side .group .input .dropdown-menu li a,
+          main.main form.step-7 .inputs .left-side .input-row .input .dropdown-menu li a,
+          main.main form.step-7 .inputs .left-side .group .input .dropdown-menu li a,
+          main.main form.step-7 .inputs .right-side .input-row .input .dropdown-menu li a,
+          main.main form.step-7 .inputs .right-side .group .input .dropdown-menu li a {
+            display: block;
+            height: 22px;
+            padding: 0 12px;
+            line-height: 22px;
+            font-size: 10px;
+            color: #9B9B9B;
+            font-weight: 300; }
+            main.main form.step-5 .inputs .left-side .input-row .input .dropdown-menu li a span,
+            main.main form.step-5 .inputs .left-side .group .input .dropdown-menu li a span,
+            main.main form.step-5 .inputs .right-side .input-row .input .dropdown-menu li a span,
+            main.main form.step-5 .inputs .right-side .group .input .dropdown-menu li a span,
+            main.main form.step-6 .inputs .left-side .input-row .input .dropdown-menu li a span,
+            main.main form.step-6 .inputs .left-side .group .input .dropdown-menu li a span,
+            main.main form.step-6 .inputs .right-side .input-row .input .dropdown-menu li a span,
+            main.main form.step-6 .inputs .right-side .group .input .dropdown-menu li a span,
+            main.main form.step-7 .inputs .left-side .input-row .input .dropdown-menu li a span,
+            main.main form.step-7 .inputs .left-side .group .input .dropdown-menu li a span,
+            main.main form.step-7 .inputs .right-side .input-row .input .dropdown-menu li a span,
+            main.main form.step-7 .inputs .right-side .group .input .dropdown-menu li a span {
+              display: inline-block;
+              color: #9B9B9B; }
+            main.main form.step-5 .inputs .left-side .input-row .input .dropdown-menu li a span.desc,
+            main.main form.step-5 .inputs .left-side .group .input .dropdown-menu li a span.desc,
+            main.main form.step-5 .inputs .right-side .input-row .input .dropdown-menu li a span.desc,
+            main.main form.step-5 .inputs .right-side .group .input .dropdown-menu li a span.desc,
+            main.main form.step-6 .inputs .left-side .input-row .input .dropdown-menu li a span.desc,
+            main.main form.step-6 .inputs .left-side .group .input .dropdown-menu li a span.desc,
+            main.main form.step-6 .inputs .right-side .input-row .input .dropdown-menu li a span.desc,
+            main.main form.step-6 .inputs .right-side .group .input .dropdown-menu li a span.desc,
+            main.main form.step-7 .inputs .left-side .input-row .input .dropdown-menu li a span.desc,
+            main.main form.step-7 .inputs .left-side .group .input .dropdown-menu li a span.desc,
+            main.main form.step-7 .inputs .right-side .input-row .input .dropdown-menu li a span.desc,
+            main.main form.step-7 .inputs .right-side .group .input .dropdown-menu li a span.desc {
+              padding-left: 13px;
+              color: #aaaaaa; }
+          main.main form.step-5 .inputs .left-side .input-row .input .dropdown-menu li a.select,
+          main.main form.step-5 .inputs .left-side .group .input .dropdown-menu li a.select,
+          main.main form.step-5 .inputs .right-side .input-row .input .dropdown-menu li a.select,
+          main.main form.step-5 .inputs .right-side .group .input .dropdown-menu li a.select,
+          main.main form.step-6 .inputs .left-side .input-row .input .dropdown-menu li a.select,
+          main.main form.step-6 .inputs .left-side .group .input .dropdown-menu li a.select,
+          main.main form.step-6 .inputs .right-side .input-row .input .dropdown-menu li a.select,
+          main.main form.step-6 .inputs .right-side .group .input .dropdown-menu li a.select,
+          main.main form.step-7 .inputs .left-side .input-row .input .dropdown-menu li a.select,
+          main.main form.step-7 .inputs .left-side .group .input .dropdown-menu li a.select,
+          main.main form.step-7 .inputs .right-side .input-row .input .dropdown-menu li a.select,
+          main.main form.step-7 .inputs .right-side .group .input .dropdown-menu li a.select {
+            background: #f1f1f1; }
+      main.main form.step-5 .inputs .left-side .input-row .input .dropdown-menu.with-sub li span,
+      main.main form.step-5 .inputs .left-side .group .input .dropdown-menu.with-sub li span,
+      main.main form.step-5 .inputs .right-side .input-row .input .dropdown-menu.with-sub li span,
+      main.main form.step-5 .inputs .right-side .group .input .dropdown-menu.with-sub li span,
+      main.main form.step-6 .inputs .left-side .input-row .input .dropdown-menu.with-sub li span,
+      main.main form.step-6 .inputs .left-side .group .input .dropdown-menu.with-sub li span,
+      main.main form.step-6 .inputs .right-side .input-row .input .dropdown-menu.with-sub li span,
+      main.main form.step-6 .inputs .right-side .group .input .dropdown-menu.with-sub li span,
+      main.main form.step-7 .inputs .left-side .input-row .input .dropdown-menu.with-sub li span,
+      main.main form.step-7 .inputs .left-side .group .input .dropdown-menu.with-sub li span,
+      main.main form.step-7 .inputs .right-side .input-row .input .dropdown-menu.with-sub li span,
+      main.main form.step-7 .inputs .right-side .group .input .dropdown-menu.with-sub li span {
+        padding-left: 12px; }
+      main.main form.step-5 .inputs .left-side .input-row .input .dropdown-menu.with-sub li a,
+      main.main form.step-5 .inputs .left-side .group .input .dropdown-menu.with-sub li a,
+      main.main form.step-5 .inputs .right-side .input-row .input .dropdown-menu.with-sub li a,
+      main.main form.step-5 .inputs .right-side .group .input .dropdown-menu.with-sub li a,
+      main.main form.step-6 .inputs .left-side .input-row .input .dropdown-menu.with-sub li a,
+      main.main form.step-6 .inputs .left-side .group .input .dropdown-menu.with-sub li a,
+      main.main form.step-6 .inputs .right-side .input-row .input .dropdown-menu.with-sub li a,
+      main.main form.step-6 .inputs .right-side .group .input .dropdown-menu.with-sub li a,
+      main.main form.step-7 .inputs .left-side .input-row .input .dropdown-menu.with-sub li a,
+      main.main form.step-7 .inputs .left-side .group .input .dropdown-menu.with-sub li a,
+      main.main form.step-7 .inputs .right-side .input-row .input .dropdown-menu.with-sub li a,
+      main.main form.step-7 .inputs .right-side .group .input .dropdown-menu.with-sub li a {
+        padding-left: 36px; }
+  main.main form.step-5 .button-bar,
+  main.main form.step-6 .button-bar,
+  main.main form.step-7 .button-bar {
+    margin-top: 65px; }
+
+/*step 6 */
+main.main form.step-6 {
+  width: 710px; }
+  main.main form.step-6 .group {
+    float: left; }
+  main.main form.step-6 .inputs {
+    display: block;
+    padding: 0; }
+    main.main form.step-6 .inputs .left-side {
+      width: 355px;
+      padding-left: 71px; }
+      main.main form.step-6 .inputs .left-side .border {
+        top: 58px; }
+    main.main form.step-6 .inputs .right-side {
+      width: 355px;
+      padding-left: 36px; }
+    main.main form.step-6 .inputs .left-side .input-row,
+    main.main form.step-6 .inputs .right-side .input-row {
+      margin-bottom: 35px; }
+      main.main form.step-6 .inputs .left-side .input-row .group .dropdown.angle button,
+      main.main form.step-6 .inputs .right-side .input-row .group .dropdown.angle button {
+        width: 90px; }
+      main.main form.step-6 .inputs .left-side .input-row .group input.years-left,
+      main.main form.step-6 .inputs .right-side .input-row .group input.years-left {
+        width: 70px;
+        min-width: 70px;
+        text-align: center;
+        color: #9b9b9b;
+        margin-right: 0; }
+  main.main form.step-6 .btn-group.inline label {
+    width: 85px; }
+  main.main form.step-6 .right-side .group-sep {
+    display: block;
+    position: relative;
+    height: 67px;
+    width: 48px;
+    float: left; }
+    main.main form.step-6 .right-side .group-sep .border {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 47px;
+      border-top: 1px solid #a7a7a7;
+      height: 1px; }
+  main.main form.step-6 .button-bar {
+    margin-top: 98px; }
+
+/*step 7 */
+main.main form.step-7 {
+  width: 617px;
+  padding: 0; }
+  main.main form.step-7 .inputs {
+    display: block;
+    padding: 29px 29px 0 6px;
+    height: 212px;
+    border-bottom: 1px solid #cccccc; }
+    main.main form.step-7 .inputs .left-side {
+      width: 298px;
+      padding-top: 8px; }
+      main.main form.step-7 .inputs .left-side .border {
+        top: 0;
+        height: 183px; }
+      main.main form.step-7 .inputs .left-side .input .company-name {
+        width: 240px; }
+      main.main form.step-7 .inputs .left-side .input .state {
+        width: 64px; }
+    main.main form.step-7 .inputs .right-side {
+      width: 284px;
+      padding-top: 8px;
+      padding-left: 93px; }
+      main.main form.step-7 .inputs .right-side .input .assert {
+        width: 192px; }
+  main.main form.step-7 .revenue {
+    display: block;
+    padding-top: 14px;
+    text-align: center; }
+    main.main form.step-7 .revenue h3 {
+      display: block;
+      font-size: 10px;
+      font-weight: 300;
+      color: #aaaaaa;
+      height: 38px;
+      margin: 0;
+      padding: 9px 0;
+      line-height: 20px; }
+    main.main form.step-7 .revenue .input-holder {
+      display: block;
+      margin: 0 auto;
+      width: 531px; }
+      main.main form.step-7 .revenue .input-holder .input {
+        display: block;
+        float: left;
+        width: 33.33%;
+        padding: 0 28px;
+        position: relative; }
+        main.main form.step-7 .revenue .input-holder .input .dollar {
+          position: absolute;
+          height: 28px;
+          width: 26px;
+          top: 22px;
+          left: 2px;
+          background: url("../i/1X/dollar-mark.png") no-repeat 50% 50%; }
+          @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+            main.main form.step-7 .revenue .input-holder .input .dollar {
+              /* on retina, use image that's scaled by 2 */
+              background-image: url("../i/2X/dollar-mark.png");
+              background-size: 6px; } }
+        main.main form.step-7 .revenue .input-holder .input label {
+          display: block;
+          font-size: 12px;
+          font-weight: 300;
+          color: #aaaaaa;
+          line-height: 22px;
+          margin: 0; }
+        main.main form.step-7 .revenue .input-holder .input input {
+          display: block;
+          height: 28px;
+          width: 100%;
+          border: 1px solid #bdbbbb;
+          background: #ffffff;
+          font-size: 12px;
+          color: #9B9B9B;
+          font-weight: 300;
+          padding: 5px 0;
+          line-height: 18px;
+          text-align: center; }
+  main.main form.step-7 .button-bar {
+    margin-top: 46px; }
+
+/*step-8 */
+form.step-8 .talk-soon {
+  height: 260px;
+  padding-top: 135px;
+  text-align: center; }
+  form.step-8 .talk-soon h3 {
+    padding: 0;
+    margin: 0 0 21px;
+    line-height: 30px;
+    font-size: 24px;
+    color: #aaaaaa;
+    font-weight: 300; }
+  form.step-8 .talk-soon span {
+    display: block;
+    line-height: 22px;
+    font-size: 16px;
+    color: #aaaaaa; }
+form.step-8 .news {
+  height: 260px;
+  padding-top: 120px;
+  text-align: center; }
+  form.step-8 .news h3 {
+    padding: 0;
+    margin: 0 0 19px;
+    line-height: 30px;
+    font-size: 24px;
+    color: #5c5c5c;
+    font-weight: 300; }
+  form.step-8 .news span {
+    display: block;
+    line-height: 22px;
+    font-size: 18px;
+    color: #5ce5cc;
+    font-style: italic; }
+  form.step-8 .news span.caret {
+    display: block;
+    margin: 0 auto;
+    border-top-width: 20px;
+    border-left-width: 20px;
+    border-right-width: 20px;
+    margin-top: 35px; }
+form.step-8 .button-bar button.btn {
+  height: 44px;
+  width: 220px;
+  border-radius: 4px;
+  font-size: 12px; }
+
+/*step-9 */
+form.step-9 {
+  width: 639px;
+  padding: 15px 0; }
+  form.step-9 .options {
+    width: 33.33%;
+    padding: 0 6px;
+    float: left; }
+    form.step-9 .options h3 {
+      display: block;
+      margin: 0;
+      padding: 13px;
+      line-height: 20px;
+      font-size: 12px;
+      color: #5c5c5c;
+      font-weight: 300;
+      text-align: center; }
+    form.step-9 .options .image-holder {
+      display: block;
+      border: 1px solid #b1b1b1;
+      background: #d7d7d7;
+      padding: 12px 17px; }
+      form.step-9 .options .image-holder img {
+        width: 100%; }
+    form.step-9 .options .button-bar {
+      margin-bottom: 0; }
+      form.step-9 .options .button-bar button.btn {
+        width: 181px; }
+  form.step-9 .logo-bottom {
+    display: block;
+    margin: 11px auto 0;
+    width: 106px;
+    height: 23px;
+    background: url("../i/1X/logo-bottom.png") no-repeat; }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      form.step-9 .logo-bottom {
+        /* on retina, use image that's scaled by 2 */
+        background-image: url("../i/2X/logo-bottom.png");
+        background-size: 106px; } }
+
+/*step-10 */
+main.main form.step-10 {
+  width: 644px;
+  padding: 12px 0 0; }
+  main.main form.step-10 .back {
+    padding: 6px 0;
+    line-height: 28px;
+    position: relative; }
+    main.main form.step-10 .back button.back-btn {
+      height: 28px;
+      width: 82px;
+      background: #4a8fe1;
+      font-size: 10px;
+      color: #ffffff;
+      border-radius: 4px;
+      line-height: 14px; }
+      main.main form.step-10 .back button.back-btn span {
+        color: #ffffff;
+        padding-left: 0; }
+      main.main form.step-10 .back button.back-btn .caret {
+        border-bottom: 5px solid transparent;
+        border-top: 5px solid transparent;
+        border-right: 5px solid #fff;
+        border-left: none;
+        position: relative;
+        top: -1px;
+        left: -2px; }
+    main.main form.step-10 .back .text {
+      display: inline-block;
+      font-size: 12px;
+      color: #5C5C5C;
+      padding-left: 10px; }
+  main.main form.step-10 .pdf-view {
+    position: relative;
+    display: block;
+    height: 168px;
+    background: #ffffff;
+    border: 1px solid #a6a6a6; }
+    main.main form.step-10 .pdf-view iframe, main.main form.step-10 .pdf-view object {
+      width: 100%;
+      height: 100%; }
+  main.main form.step-10 .download-pdf {
+    display: block;
+    text-align: right;
+    line-height: 19px; }
+    main.main form.step-10 .download-pdf a {
+      font-size: 9px;
+      color: #30506D;
+      text-decoration: underline;
+      padding-right: 5px; }
+  main.main form.step-10 .list {
+    display: block;
+    padding-top: 11px;
+    margin: 0 -12px; }
+    main.main form.step-10 .list .items {
+      width: 50%;
+      float: left;
+      padding: 12px; }
+      main.main form.step-10 .list .items h3 {
+        display: block;
+        line-height: 24px;
+        font-size: 12px;
+        color: #9d9d9d;
+        margin: 0;
+        letter-spacing: 0.5px; }
+      main.main form.step-10 .list .items .item-holder {
+        display: block;
+        height: 119px;
+        border: 1px solid #bab7b7;
+        background: #f0f0f0;
+        overflow: auto;
+        padding: 10px 0; }
+        main.main form.step-10 .list .items .item-holder ul {
+          padding-left: 20px; }
+  main.main form.step-10 .button-bar {
+    margin-top: 42px; }
+
+/*step-11 */
+form.step-11 {
+  padding-top: 77px; }
+  form.step-11 .star {
+    display: block;
+    background: url("../i/1X/star-icon.png") no-repeat;
+    width: 93px;
+    height: 90px;
+    margin: 0 auto; }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      form.step-11 .star {
+        /* on retina, use image that's scaled by 2 */
+        background-image: url("../i/2X/star-icon.png");
+        background-size: 93px; } }
+  form.step-11 h1 {
+    display: block;
+    text-align: center;
+    font-size: 32px;
+    color: #5c5c5c;
+    font-weight: 700;
+    line-height: 43px;
+    margin: 28px 0 16px; }
+  form.step-11 .border {
+    display: block;
+    margin: 0 auto;
+    border-top: 1px solid #d6d6d6;
+    width: 97px;
+    margin-bottom: 23px; }
+  form.step-11 .text {
+    display: block;
+    line-height: 22px;
+    font-size: 15px;
+    color: #f8b32d;
+    text-align: center;
+    font-style: italic; }
+  form.step-11 .video {
+    display: block;
+    margin: 27px auto 25px;
+    width: 413px;
+    height: 215px;
+    border: 1px solid #d0cfcf;
+    background: #dfdfdf; }
+
+/*# sourceMappingURL=screen.css.map */
