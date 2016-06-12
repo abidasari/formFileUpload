@@ -73,14 +73,14 @@ $(document).ready(function (){
           upload = true; api = false;
           $('form.step-3 .button-bar .btn').removeClass('disabled');
       }
-      else{
+      else {
           $("#uploadFileNameDivP").html("<span style='color: #59a2e7'>Please upload .pdf files only</span>");
           upload = false; api = false;
       }
       console.log("upload change<end>: api- " + api + " upload- " + upload);
   });
 
-  $("#uploadBillDetails").on("click", function(){
+  $("#button-bar-div").on("click", function(){
       console.log("ButtonClicked");
       $("#form-3-submit").click();
   });
@@ -88,18 +88,23 @@ $(document).ready(function (){
   $(".step-3").on("submit", function(ev){
       console.log("File Submitted!");
       var formData = new FormData($(".step-3"));
-      formData.append("BillFileField", $(".step-3").files[0]);
+      var files = document.getElementById("upload");
+      formData.append("BillFileField", files[0]);
+      $
+
 
       var oReq = new XMLHttpRequest();
       oReq.open("POST", "uploads.php", true);
       oReq.onload = function(oEvent) {
-      if (oReq.status == 200) {
-        console.log("UPLOADED!!!");
-      } else {
-        console.log("Error " + oReq.status + " occurred when trying to upload your file.");
-      }
+        if (oReq.status == 200) {
+          console.log("UPLOADED!!!");
+        } else {
+          console.log("Error " + oReq.status + " occurred when trying to upload your file.");
+        }
       };
       oReq.send(formData);
+
+
       ev.preventDefault();
   });
 });
