@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <main class="main">
+        <!-- <div class="section-holder"> -->
+            <div>
+              <section>
+                <form class="step-3" method="post" action="uploads.php" autocomplete="off">
+                    <h3 class="form-title">Please Select</h3>
+
+                    <input type="file" class="file-input" id="upload">
+                    <input type="submit" id="form-3-submit" style="display:none;">
+                    <!--End .title-->
+
+                    <div class="clearfix" data-toggle="buttons">
+                        <div class="action-button-holder">
+                            <label>I Know My Utility Login Info</label>
+
+                                <button class="btn pie download">DOWNLOAD BILL DATA INSTANTLY</button>
+                        </div>
+                        <div class="separator">
+                            <span class="text">Or</span>
+                            <span class="border"></span>
+                        </div>
+
+                        <div class="action-button-holder">
+                            <label>I Have A PDF Copy of my Bill</label>
+                            <button class="btn pie upload">UPLOAD COPY OF MY BILL</button>
+                        </div>
+                    </div>
+
+                    <div id="uploadFileNameDiv" >
+                        <p id="uploadFileNameDivP"></p>
+                    </div>
+                    <a href="#openModal" id="triggerDialog"></a>
+                    <div id="openModal" class="modalDialog">
+                        <div>
+                            <a href="#close" title="Close" class="closeBtn" style="text-decoration=none;">X</a>
+                            <div>
+                                <iframe id="utilitiesApiIframe" src="https://utilityapi.com/portal/kyle_cherrick_gmail" height="450px" width="601px" ></iframe>
+                            </div>
+                            <a href="#done" title="Done" style="text-decoration=none;" class="done">Done</a>
+                        </div>
+                    </div>
+
+                    <!--End btn-group-->
+
+                    <div id="button-bar-div" class="button-bar">
+                        <button type="button" class="btn continue pie disabled">CONTINUE</button>
+                    </div>
+                    <!--End button-bar-->
+
+                </form>
+                <!--End form-->
+            </section>
+            <!--End section-->
+        </div>
+        <!--End section-holder-->
+    </main>
+  </body>
+</html>
