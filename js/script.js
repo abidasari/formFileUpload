@@ -87,24 +87,26 @@ $(document).ready(function (){
 
   $(".step-3").on("submit", function(ev){
       console.log("File Submitted!");
-      var formData = new FormData($(".step-3"));
-      var files = document.getElementById("upload");
-      formData.append("BillFileField", files[0]);
-      $
+      var formData = new FormData();
+      var file = $("#upload").prop('files')[0];
+      formData.append("FILE", file);
+      formData.append("USERID", "USERIDPLACEHOLDER");
 
+      $.ajax({
+        url: "uploads.php", // Where to send
+        type: "POST", // GET or POST
+        dataType: 'text', // What to expect in return from the server
+        data: formData,
+        success: function(data, textStatus, xhr){
+          console.log("SUCCESS: " + data);
+        },
+        error: function(xhr, textStatus, errThrown){
+          console.log("ERROR: " + textStatus);
+        },
+        processData: false,
+        contentType: false
+      });
 
-      var oReq = new XMLHttpRequest();
-      oReq.open("POST", "uploads.php", true);
-      oReq.onload = function(oEvent) {
-        if (oReq.status == 200) {
-          console.log("UPLOADED!!!");
-        } else {
-          console.log("Error " + oReq.status + " occurred when trying to upload your file.");
-        }
-      };
-      oReq.send(formData);
-
-
-      ev.preventDefault();
+      return false;
   });
 });
